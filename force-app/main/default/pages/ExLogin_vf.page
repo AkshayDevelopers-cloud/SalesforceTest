@@ -1,0 +1,46 @@
+<apex:page id="loginPage" showHeader="true"  title="{!$Label.site.site_login}">
+     
+ <style>
+        body {
+            background-image: url("https://www.kibrispdr.org/dwn/2/hospital-wallpaper.jpg");
+            background-repeat:no-repeat;
+             background-size: 100% 150%;
+        }
+         .activeTab {background-color: #696969; color:white; background-image:none}
+    .inactiveTab { background-color: #1E90FF; color:black; background-image:none}  
+     .task{color: #696969}
+    </style>
+      <!-- Create Tab panel -->
+    <apex:tabPanel switchType="client" selectedTab="name2" id="AccountTabPanel"
+        tabClass="activeTab" inactiveTabClass="inactiveTab" styleClass="task">
+        <apex:tab label="Home" name="home" id="tabOne">akshay</apex:tab>
+    <apex:tab label="Contact" name="contact" id="tabTwo">abhay</apex:tab>
+<apex:tab label="About" name="about" id="tabThree" >akshay thate</apex:tab>
+    </apex:tabPanel>
+
+    <apex:define name="body">  
+      <center>
+        <apex:panelGrid columns="1"> 
+          <br/>
+          <br/>
+          <apex:panelGrid width="300" cellpadding="50" cellspacing="0" columns="1" styleClass="topPanelContainer"> 
+            <br/>
+            <apex:outputPanel layout="block" styleClass="topPanel">
+              <apex:panelGrid width="800" cellpadding="0" cellspacing="0" columns="2"> 
+                <apex:panelGroup >
+                  <br/><center >
+                  <apex:outputText styleClass="title" value="{!$Label.site.login}"/>
+                  <br/>
+                  <c:SiteLogin id="SiteLoginHtml"/>
+                  <br/></center>
+                </apex:panelGroup>
+              </apex:panelGrid> 
+             </apex:outputPanel>
+          
+          </apex:panelGrid> 
+       </apex:panelGrid>
+      </center>
+      <br/>
+    </apex:define>
+
+</apex:page>
